@@ -1,0 +1,119 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-image: url("./todo-background.jpg");
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  position: relative;
+}
+
+header {
+  background-color: #1976d2;
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 3rem;
+  margin: 0;
+  color: #fff;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.btn-dark {
+  border-radius: 0;
+}
+
+#items li {
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+  word-break: break-all;
+}
+
+.item-number {
+  margin-right: 5px;
+}
+
+.edit {
+  margin-left: 5px;
+}
+
+.delete-button {
+  margin-right: 5px;
+}
+
+#items li:hover {
+  background-color: #f0f0f0;
+}
+
+.list-group {
+  border: none;
+}
+
+.list-group h3 {
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+}
+
+.text-success {
+  font-size: 1.25rem;
+  animation: fadeOut 2s ease forwards;
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+@media (max-width: 767px) {
+  .col-lg-7,
+  .col-lg-5,
+  .col-md-7,
+  .col-md-5,
+  .col-sm-7,
+  .col-sm-5 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  #items li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    margin-top: 0.5rem;
+    margin-left: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
